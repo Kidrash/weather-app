@@ -144,3 +144,15 @@ h1, h2{
 .panel ul h3{
     margin: 3em 0; 
 }
+.city{
+    display: block;
+    cursor: pointer;
+}
+.city:hover{
+    color: #000;
+}
+.details li{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
