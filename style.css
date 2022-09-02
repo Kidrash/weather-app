@@ -99,3 +99,21 @@ h1, h2{
 .panel form{
     margin-bottom: 3em;
 }
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border:none;
+    outline: none;
+    background: #609e9e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+.submit:hover{
+    background: #fff !important;
+    color: #000;
+}
