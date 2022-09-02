@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="weather-app">
+        <div class="container">
+            <h1 class="brand">the Weather</h1>
+            <div>
+                <!-- &#176; === the degrees sign -->
+                <h2 class="temp">16&#176;</h2>
+                <div class="city-time">
+                    <h2 class="name">Nairobi</h2>
+                    <small>
+                        <span class="time">07:21</span>
+                        <span class="date">
+                            Friday Sept 22
+                        </span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <img src="/phase-1-final-project/Whether-to-do/Images/cloudy.png" class="icon" alt="icon" width="50" height ="50">
+                    <span class="condition">Cloudy</span>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <form id="locationInput">
+                <input type="text" class="search" placeholder="Search location...">
+                <button type="submit" class="submit">
+                    <i class="gg-search"></i>
+                </button>
+            </form>
+
+            <ul class="cities">
+                <li class="city">Nairobi</li>
+                <li class="city">Nakuru</li>
+                <li class="city">Mombasa</li>
+                <li class="city">Eldoret</li>
+            </ul>
+            <ul class="details">
+                <h3>Weather Details</h3>
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">64%</span>
+                </li>
+                <li>
+                    <span>Wind</span>
+                    <span class="wind">8Kmh/hr</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="/phase-1-final-project/Whether-to-do/Plan B/script.js"></script>
+</body>
+</html>
