@@ -91,18 +91,18 @@ function fetchWeatherData(){
         btn.style.background = '#e5ba92';
         if(timeOfDay == 'night'){
             btn.style.background = '#181e27'
-    //     // Do the same for a cloudy weather
-    //     }else if (
-    //         code == 801 ||
-    //         code == 802 ||
-    //         code == 803 ||
-    //         code == 804 
-    //     ){
-    //         app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
-    //         btn.style.background = '#fa6d1b';
-    //         if (timeOfDay == 'night'){
-    //             btn.style.background = '#181e27';
-    //         }
+        // Do the same for a cloudy weather
+        }else if (
+            code == 801 ||
+            code == 802 ||
+            code == 803 ||
+            code == 804 
+        ){
+            app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
+            btn.style.background = '#fa6d1b';
+            if (timeOfDay == 'night'){
+                btn.style.background = '#181e27';
+            }
     //     // Do the same for rain
     //     }else if(
     //         code == 500 ||
