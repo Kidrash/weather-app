@@ -11,7 +11,7 @@ const windOutput = document.querySelector('.wind');
 const form = document.querySelector('locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
-let cities = document.querySelector('.city');
+let cities = document.querySelectorAll('.city');
 
 let cityInput = 'Nairobi';
 // Add click event in search panel

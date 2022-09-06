@@ -10,7 +10,7 @@
 <body>
     <div class="weather-app">
         <div class="container">
-            <h1 class="brand">the Weather</h1>
+            <h1 class="brand">Hmm, Whats today's weather like</h1>
             <div>
                 <!-- &#176; === the degrees sign -->
                 <h2 class="temp">16&#176;</h2>
@@ -24,7 +24,7 @@
                     </small>
                 </div>
                 <div class="weather">
-                    <img src="/phase-1-final-project/Whether-to-do/Images/cloudy.png" class="icon" alt="icon" width="50" height ="50">
+                    <img src="./Images/cloudy.png" class="icon" alt="icon" width="50" height ="50">
                     <span class="condition">Cloudy</span>
                 </div>
             </div>
@@ -58,8 +58,18 @@
                     <span class="wind">8Kmh/hr</span>
                 </li>
             </ul>
+            <div class="todoList">
+                <h4>Day's Activities</h4>
+                <form id="create-task-form" action="" method="POST">
+                    <label for="new-task-description">Task description:</label>
+                    <input type="text" id="new_task_description" name="new-task-description" placeholder="description">
+                    <input type="submit" value="Create New Task">
+                </form>
+                <ul id="tasks">
+                </ul>
+            </div>
         </div>
     </div>
-<script src="/phase-1-final-project/Whether-to-do/Plan B/script.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
