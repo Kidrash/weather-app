@@ -120,16 +120,16 @@ function fetchWeatherData(){
         if(timeOfDay == 'night'){
             btn.style.background = '#325c80';
         }
-    //     // Do the same for thunderstorm
-    //     }else{
-    //         app.style.backgroundImage = `url(./images${timeOfDay}/thunderstorm.jpg)`;
-    //         btn.style.background = '#1b1b1b';
-    //     }
-    //     app.style.opacity = '1';
-    // })
-    // .catch(() =>{
-    //     alert("Is that a city?")
-    //     app.style.opacity = '1';
+        // Do the same for thunderstorm
+        }else{
+            app.style.backgroundImage = `url(./images${timeOfDay}/thunderstorm.jpg)`;
+            btn.style.background = '#1b1b1b';
+        }
+        app.style.opacity = '1';
+    })
+    .catch(() =>{
+        alert("Is that a city?")
+        app.style.opacity = '1';
     });
 }
 
