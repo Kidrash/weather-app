@@ -78,58 +78,58 @@ function fetchWeatherData(){
         humidityOutput.innerHTML = data.current.humidity + "%";
         windOutput.innerHTML = data.current.wind_kph + "km/hr";
 
-    //     // set default time of day
-    //     let timeOfDay = "day";
-    //     const code = data.current.condition.code;
-    //     if(!data.current,is_day){
-    //         timeOfDay = "night";
-    //     }
-    //     // code for a clear weather is 800
-    //     if(code == 800)
-    //     app.style.backgroundImage = `ur(./images/${timeOfDay}/clear.jpg)`
-    //     //  change the btn color if it's day/night
-    //     btn.style.background = '#e5ba92';
-    //     if(timeOfDay == 'night'){
-    //         btn.style.background = '#181e27'
-    //     // Do the same for a cloudy weather
-    //     }else if (
-    //         code == 801 ||
-    //         code == 802 ||
-    //         code == 803 ||
-    //         code == 804 
-    //     ){
-    //         app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
-    //         btn.style.background = '#fa6d1b';
-    //         if (timeOfDay == 'night'){
-    //             btn.style.background = '#181e27';
-    //         }
-    //     // Do the same for rain
-    //     }else if(
-    //         code == 500 ||
-    //         code == 501 ||
-    //         code == 502 ||
-    //         code == 503 ||
-    //         code == 504 ||
-    //         code == 511 ||
-    //         code == 520 ||
-    //         code == 521 ||
-    //         code == 522 ||
-    //         code == 531
-    //     ){app.style.backgroundImage = `url(./images/${timeOfDay}/rainy.jpg)`;
-    //     btn.style.background = '#647d75';
-    //     if(timeOfDay == 'night'){
-    //         btn.style.background = '#325c80';
-    //     }
-    //     // Do the same for thunderstorm
-    //     }else{
-    //         app.style.backgroundImage = `url(./images${timeOfDay}/thunderstorm.jpg)`;
-    //         btn.style.background = '#1b1b1b';
-    //     }
-    //     app.style.opacity = '1';
-    // })
-    // .catch(() =>{
-    //     alert("Is that a city?")
-    //     app.style.opacity = '1';
+        // set default time of day
+        let timeOfDay = "day";
+        const code = data.current.condition.code;
+        if(!data.current,is_day){
+            timeOfDay = "night";
+        }
+        // code for a clear weather is 800
+        if(code == 800)
+        app.style.backgroundImage = `ur(./images/${timeOfDay}/clear.jpg)`
+        //  change the btn color if it's day/night
+        btn.style.background = '#e5ba92';
+        if(timeOfDay == 'night'){
+            btn.style.background = '#181e27'
+        // Do the same for a cloudy weather
+        }else if (
+            code == 801 ||
+            code == 802 ||
+            code == 803 ||
+            code == 804 
+        ){
+            app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
+            btn.style.background = '#fa6d1b';
+            if (timeOfDay == 'night'){
+                btn.style.background = '#181e27';
+            }
+        // Do the same for rain
+        }else if(
+            code == 500 ||
+            code == 501 ||
+            code == 502 ||
+            code == 503 ||
+            code == 504 ||
+            code == 511 ||
+            code == 520 ||
+            code == 521 ||
+            code == 522 ||
+            code == 531
+        ){app.style.backgroundImage = `url(./images/${timeOfDay}/rainy.jpg)`;
+        btn.style.background = '#647d75';
+        if(timeOfDay == 'night'){
+            btn.style.background = '#325c80';
+        }
+        // Do the same for thunderstorm
+        }else{
+            app.style.backgroundImage = `url(./images${timeOfDay}/thunderstorm.jpg)`;
+            btn.style.background = '#1b1b1b';
+        }
+        app.style.opacity = '1';
+    })
+    .catch(() =>{
+        alert("Is that a city?")
+        app.style.opacity = '1';
     });
 }
 
