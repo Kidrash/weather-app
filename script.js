@@ -84,9 +84,9 @@ function fetchWeatherData(){
         if(!data.current,is_day){
             timeOfDay = "night";
         }
-        // code for a clear weather is 800
+        // code for a clear weather is 800  **code from the api website
         if(code == 800)
-        app.style.backgroundImage = `ur(./images/${timeOfDay}/clear.png)`
+        app.style.backgroundImage = `ur(./Images/${timeOfDay}/clear.jpg)`
         //  change the btn color if it's day/night
         btn.style.background = '#e5ba92';
         if(timeOfDay == 'night'){
@@ -98,7 +98,7 @@ function fetchWeatherData(){
             code == 803 ||
             code == 804 
         ){
-            app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
+            app.style.backgroundImage = `url(./Images/${timeOfDay}/cloudy.jpg)`;
             btn.style.background = '#fa6d1b';
             if (timeOfDay == 'night'){
                 btn.style.background = '#181e27';
@@ -115,14 +115,14 @@ function fetchWeatherData(){
             code == 521 ||
             code == 522 ||
             code == 531
-        ){app.style.backgroundImage = `url(./images/${timeOfDay}/rainy.jpg)`;
+        ){app.style.backgroundImage = `url(./Images/${timeOfDay}/rainy.jpg)`;
         btn.style.background = '#647d75';
         if(timeOfDay == 'night'){
             btn.style.background = '#325c80';
         }
         // Do the same for thunderstorm
         }else{
-            app.style.backgroundImage = `url(./images${timeOfDay}/thunderstorm.jpg)`;
+            app.style.backgroundImage = `url(./Images${timeOfDay}/thunderstorm.jpg)`;
             btn.style.background = '#1b1b1b';
         }
         app.style.opacity = '1';
@@ -133,29 +133,59 @@ function fetchWeatherData(){
         
     });
 }
-// Add tasks/ day's activities
-document.addEventListener("DOMContentLoaded", () => {
-    let form =  document.querySelector('form')
-    form.addEventListener('submit', (e) =>{
-    e.preventDefault()
-    handleTask(e.target.new_task_description.value)
-    form.reset()
-  })
-  function handleTask(newTask){
-    let p = document.createElement('p')
-    let btn = document.createElement('button')
-  
-    btn.textContent = "x"
-    btn.addEventListener("click", handleDelete)
-  
-    p.textContent = newTask
-    p.appendChild(btn)
-    document.querySelector('#tasks').appendChild(p);
+// Day's activities
+// Create a "remove" button and append it to each list item
+const myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  const span = document.createElement("SPAN");
+  const txt = document.createTextNode("\u00D7");
+  span.className = "remove";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a remove button to hide the current list item
+const remove = document.getElementsByClassName("remove");
+ function deleteTask(){
+    
+ }
+
+// Add a "checked" symbol when clicking on a list item
+const list = document.querySelector('li');
+list.addEventListener('click', function(e) {
+  if (e.target.tagName === 'li') {
+    e.target.classList.toggle('checked');
   }
-    function handleDelete(e){
-    e.target.parentNode.remove()
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  const li = document.createElement("li");
+  const inputValue = document.getElementById("myInput").value;
+  const t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
   }
-});
+  document.getElementById("myInput").value = "";
+
+  const span = document.createElement("SPAN");
+  const txt = document.createTextNode("\u00D7");
+  span.className = "remove";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+
+  for (i = 0; i < remove.length; i++) {
+    remove[i].onclick = function() {
+      const div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
 // call the function on page load
 fetchWeatherData();
 app.style.opacity = 1;
