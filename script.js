@@ -86,7 +86,7 @@ function fetchWeatherData(){
         }
         // code for a clear weather is 800
         if(code == 800)
-        app.style.backgroundImage = `ur(./images/${timeOfDay}/clear.jpg)`
+        app.style.backgroundImage = `ur(./images/${timeOfDay}/clear.png)`
         //  change the btn color if it's day/night
         btn.style.background = '#e5ba92';
         if(timeOfDay == 'night'){
