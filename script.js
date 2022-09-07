@@ -24,7 +24,7 @@ cities.forEach((city) =>{
     });
 })
 // submit button
-form .addEventListener('submit', (e) => {
+    document.form.addEventListener('submit', (e) => {
     if (search.value.length == 0){
         alert('please type a city name');
     }else{
@@ -52,7 +52,7 @@ function dayOfTheWeek(day, month, year){
 }
 // fetching from API    
 function fetchWeatherData(){
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=123ac1176c339e22e6b46ccd6bd0a898&q=${cityInput}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=123ac1176c339e22e6b46ccd6bd0a898&q=Nairobi`)
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -159,3 +159,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // call the function on page load
 fetchWeatherData();
 app.style.opacity = 1;
+
+// http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=123ac1176c339e22e6b46ccd6bd0a898&q={cityInput}

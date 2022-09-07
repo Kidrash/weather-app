@@ -29,7 +29,7 @@ h1, h2{
 }
 .weather-app{
     min-height:100vh;
-    background-image: url(/phase-1-final-project/Whether-to-do/Images/wallhaven-0qz237.png);
+    background-image: url(./Images/wallhaven-0qz237.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,7 +107,8 @@ h1, h2{
     margin: 0;
     border:none;
     outline: none;
-    background: #609e9e;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(5px);
     color: #fff;
     cursor: pointer;
     font-size: 1.2em;
